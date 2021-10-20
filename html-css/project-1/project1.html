@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project-1</title>
+    <style>
+        td{
+            width: 50px;
+        }
+    </style>
 </head>
 <body>
     <h1>Create From</h1>
     <div>
-        <table>
+        <table cellpadding="7">
             <tr>
                 <td><label for="username">Username:</label></td>
                 <td><input type="text" id="username"></td>
@@ -54,11 +59,14 @@
                     <label for="mail">Mail</label><br>
                 </td>
             </tr>
+            <tr>
+                <td></td>
+                <td>
+                <input type="button" name="login" id="login" value="Login">
+                <input type="button" name="Reset" id="reset" value="Reset">
+                </td>
+            </tr>
         </table>
-        <div>
-            <input type="button" name="login" id="login" value="Login">
-            <input type="button" name="Reset" id="reset" value="Reset">
-        </div>
     </div>
 </body>
 </html>
