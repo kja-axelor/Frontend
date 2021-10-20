@@ -8,57 +8,57 @@
 </head>
 <body>
     <h1>Create From</h1>
-    <table>
-        <tr>
-            <td><label for="username">Username:</label></td>
-            <td><input type="text" id="username"></td>
-        </tr>
-        <tr>
-            <td><label for="password">Password:</label></td>
-            <td><input type="password" name="Password" id="password"></td>
-        </tr>
-        <tr>
-            <td><label for="city">City of Employment:</label></td>
-            <td><input type="text" id="city"></td>
-        </tr>
-        <tr>
-            <td><label for="server">Web server:</label></td>
-            <td>
-                <select name="server" id="server">
-                    <option value="webserver">Choose a web server</option>
-                    <option value="apache">Apache</option>
-                    <option value="tomcat">Tomcat</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td><label>Please specify your role</label></td>
-            <td>
-                <input type="radio" name="role" id="admin" value="Admin">
-                <label for="admin">Admin</label><br>
-                <input type="radio" name="role" id="engineer" value="Engineer">
-                <label for="engineer">Engineer</label><br>
-                <input type="radio" name="role" id="manager" value="Manager">
-                <label for="manager">Manager</label>
-            </td>
-        </tr>
-        <tr>
-            <td><label>Single Sign-on to the following activity</label></td>
-            <td>
-                <input type="checkbox" name="mail" id="mail" value="Mail">
-                <label for="mail">Mail</label><br>
-                <input type="checkbox" name="payroll" id="payroll" value="Payroll">
-                <label for="payroll">Payroll</label><br>
-                <input type="checkbox" name="mail" id="mail" value="Mail">
-                <label for="mail">Mail</label><br>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="button" name="login" id="login" value="Login">
-                <input type="button" name="Reset" id="reset" value="Reset">
-            </td>
-        </tr>
-    </table>
+    <div>
+        <table>
+            <tr>
+                <td><label for="username">Username:</label></td>
+                <td><input type="text" id="username"></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" name="Password" id="password"></td>
+            </tr>
+            <tr>
+                <td><label for="city">City of Employment:</label></td>
+                <td><input type="text" id="city"></td>
+            </tr>
+            <tr>
+                <td><label for="server">Web server:</label></td>
+                <td>
+                    <select name="server" id="server">
+                        <option value="webserver">Choose a web server</option>
+                        <option value="apache">Apache</option>
+                        <option value="tomcat">Tomcat</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Please specify your role</label></td>
+                <td>
+                    <input type="radio" name="role" id="admin" value="Admin">
+                    <label for="admin">Admin</label><br>
+                    <input type="radio" name="role" id="engineer" value="Engineer">
+                    <label for="engineer">Engineer</label><br>
+                    <input type="radio" name="role" id="manager" value="Manager">
+                    <label for="manager">Manager</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Single Sign-on to the following activity</label></td>
+                <td>
+                    <input type="checkbox" name="mail" id="mail" value="Mail">
+                    <label for="mail">Mail</label><br>
+                    <input type="checkbox" name="payroll" id="payroll" value="Payroll">
+                    <label for="payroll">Payroll</label><br>
+                    <input type="checkbox" name="mail" id="mail" value="Mail">
+                    <label for="mail">Mail</label><br>
+                </td>
+            </tr>
+        </table>
+        <div>
+            <input type="button" name="login" id="login" value="Login">
+            <input type="button" name="Reset" id="reset" value="Reset">
+        </div>
+    </div>
 </body>
 </html>

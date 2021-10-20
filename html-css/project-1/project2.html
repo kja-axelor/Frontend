@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-2</title>
+</head>
+
+<body>
+    <div style="size: 15px;">
+        <h1>Create Form</h1>
+        <form action="/">
+            <div style="margin-bottom: 3px; size: 15px;">
+                <label for="username">Username:</label>
+                <input type="text" id="username">
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" name="Password" id="password">
+            </div>
+            <div>
+                <label for="city">City of Employment:</label>
+                <input type="text" id="city">
+            </div>
+            <div>
+                <label for="server">Web server:</label>
+                <select name="server" id="server">
+                    <option value="webserver">Choose a web server</option>
+                    <option value="apache">Apache</option>
+                    <option value="tomcat">Tomcat</option>
+                </select>
+            </div>
+            <div>
+                <label>Please specify your role</label>
+                <input type="radio" name="role" id="admin" value="Admin">
+                <label for="admin">Admin</label><br>
+                <input type="radio" name="role" id="engineer" value="Engineer">
+                <label for="engineer">Engineer</label><br>
+                <input type="radio" name="role" id="manager" value="Manager">
+                <label for="manager">Manager</label>
+            </div>
+            <div>
+                <label>Single Sign-on to the following activity</label>
+                <input type="checkbox" name="mail" id="mail" value="Mail">
+                <label for="mail">Mail</label>
+                <input type="checkbox" name="payroll" id="payroll" value="Payroll">
+                <label for="payroll">Payroll</label>
+                <input type="checkbox" name="mail" id="mail" value="Mail">
+                <label for="mail">Mail</label>
+            </div>
+            <div>
+                <input type="button" name="login" id="login" value="Login">
+                <input type="button" name="Reset" id="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
