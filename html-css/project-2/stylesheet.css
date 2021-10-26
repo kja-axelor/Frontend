@@ -29,8 +29,10 @@ ul li{
     margin: 20px;
     color: whitesmoke;
     text-decoration: none;
+    text-transform: uppercase;
 }
 .links li a:hover{
+    text-decoration: underline;
     color:darkgreen;
     font-weight: bold;
     cursor: pointer;
