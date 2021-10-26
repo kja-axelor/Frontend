@@ -39,3 +39,20 @@ ul li{
     color: whitesmoke;
     text-decoration: none;
 }
+.content {
+    text-align: center;
+    color: #36454F;
+    padding: 40px 30px;
+    font-family: 'Zilla Slab', serif;
+    font-size: 14pt;
+}
+.para{
+    margin: 10px 35%;
+}
+.para a{
+    text-decoration: none;
+    color: #36454F;
+}
+.heading{
+    font-weight: bold;
+}
