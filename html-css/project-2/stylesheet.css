@@ -32,7 +32,7 @@ ul li{
     text-transform: uppercase;
 }
 .links li a:hover{
-    color:darkgreen;
+    color:#05386B;
     font-weight: bold;
     cursor: pointer;
 }
@@ -44,7 +44,6 @@ ul li{
     text-align: center;
     color: #36454F;
     padding: 40px 30px;
-    font-family: 'Zilla Slab', serif;
     font-size: 14pt;
 }
 .para{
@@ -56,4 +55,9 @@ ul li{
 }
 .heading{
     font-weight: bold;
+}
+h2 a:hover{
+    color:#05386B;
+    font-weight: bold;
+    cursor: pointer;
 }
