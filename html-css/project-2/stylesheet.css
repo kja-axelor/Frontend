@@ -32,7 +32,6 @@ ul li{
     text-transform: uppercase;
 }
 .links li a:hover{
-    text-decoration: underline;
     color:darkgreen;
     font-weight: bold;
     cursor: pointer;
