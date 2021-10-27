@@ -6,34 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project-2</title>
+    <link rel="stylesheet" href="./css/stylesheet.css">
 </head>
 
 <body>
-    <div>
+    <div class="content">
         <h1>Create Form</h1>
         <form action="/">
-            <div>
-                <label for="username">Username:</label>
-                <input type="text" id="username">
+            <div class="row">
+                <label for="username" class="label">Username:</label>
+                <input type="text" id="username" class="input">
             </div>
-            <div>
-                <label for="password">Password:</label>
-                <input type="password" name="Password" id="password">
+            <div class="row">
+                <label for="password" class="label">Password:</label>
+                <input type="password" name="Password" id="password" class="input">
             </div>
-            <div>
-                <label for="city">City of Employment:</label>
-                <input type="text" id="city">
+            <div class="row">
+                <label for="city" class="label">City of Employment:</label>
+                <input type="text" id="city" class="input">
             </div>
-            <div>
-                <label for="server">Web server:</label>
-                <select name="server" id="server">
+            <div class="row">
+                <label for="server" class="label">Web server:</label>
+                <select name="server" id="server" class="input">
                     <option value="webserver">Choose a web server</option>
                     <option value="apache">Apache</option>
                     <option value="tomcat">Tomcat</option>
                 </select>
             </div>
-            <div>
-                <label>Please specify your role</label>
+            <div class="row">
+                <label class="label">Please specify your role</label>
                 <input type="radio" name="role" id="admin" value="Admin">
                 <label for="admin">Admin</label><br>
                 <input type="radio" name="role" id="engineer" value="Engineer">
@@ -41,18 +42,18 @@
                 <input type="radio" name="role" id="manager" value="Manager">
                 <label for="manager">Manager</label>
             </div>
-            <div>
-                <label>Single Sign-on to the following activity</label>
+            <div class="row" class="label">
+                <label class="label">Single Sign-on to the following activity</label>
                 <input type="checkbox" name="mail" id="mail" value="Mail">
                 <label for="mail">Mail</label>
                 <input type="checkbox" name="payroll" id="payroll" value="Payroll">
                 <label for="payroll">Payroll</label>
-                <input type="checkbox" name="mail" id="mail" value="Mail">
-                <label for="mail">Mail</label>
+                <input type="checkbox" name="service" id="service" value="service">
+                <label for="service">Self-service</label>
             </div>
             <div>
-                <input type="button" name="login" id="login" value="Login">
-                <input type="button" name="Reset" id="reset" value="Reset">
+                <input type="button" name="login" id="login" value="Login" style="margin-left: 7%;">
+                <input type="reset" value="Reset">
             </div>
         </form>
     </div>
