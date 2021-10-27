@@ -5,14 +5,13 @@
   gap: 4px;
 }
 .label {
-  width: 7%;
+  max-width: 7%;
   min-width: 150px;
   padding: 0;
 }
-.contenet {
-  width: 70%;
+.content {
+  width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
 }
 .input{
     min-width: 200px;

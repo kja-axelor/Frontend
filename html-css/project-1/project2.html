@@ -35,21 +35,29 @@
             </div>
             <div class="row">
                 <label class="label">Please specify your role</label>
-                <input type="radio" name="role" id="admin" value="Admin">
-                <label for="admin">Admin</label><br>
-                <input type="radio" name="role" id="engineer" value="Engineer">
-                <label for="engineer">Engineer</label><br>
-                <input type="radio" name="role" id="manager" value="Manager">
-                <label for="manager">Manager</label>
+                <div>
+                    <input type="radio" name="role" id="admin" value="Admin">
+                    <label for="admin">Admin</label>
+                    <input type="radio" name="role" id="engineer" value="Engineer">
+                    <label for="engineer">Engineer</label>
+                    <input type="radio" name="role" id="manager" value="Manager">
+                    <label for="manager">Manager</label>
+                </div>
             </div>
-            <div class="row" class="label">
+            <div class="row">
                 <label class="label">Single Sign-on to the following activity</label>
-                <input type="checkbox" name="mail" id="mail" value="Mail">
-                <label for="mail">Mail</label>
-                <input type="checkbox" name="payroll" id="payroll" value="Payroll">
-                <label for="payroll">Payroll</label>
-                <input type="checkbox" name="service" id="service" value="service">
-                <label for="service">Self-service</label>
+                <div>
+                    <input type="checkbox" name="mail" id="mail" value="Mail">
+                    <label for="mail">Mail</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="payroll" id="payroll" value="Payroll">
+                    <label for="payroll">Payroll</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="service" id="service" value="service">
+                    <label for="service">Self-service</label>
+                </div>
             </div>
             <div>
                 <input type="button" name="login" id="login" value="Login" style="margin-left: 7%;">
