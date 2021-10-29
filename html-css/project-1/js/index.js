@@ -46,8 +46,14 @@ function cityvalidate(){
     }
 }
 function age(){
-    var dob = new Date(document.getElementById("dob").value);
+    const input = document.getElementById("dob").value;
+    var dob = new Date(input);
     var today = new Date();
+    /* if(input == "" || input == "null"){
+    //     document.getElementById("dateinfo").innerHTML = "please fill date";
+    //     document.getElementById("dateinfo").style.color = "red";
+    //     document.getElementById("dob").style.border = "2px solid red";
+    }*/
     if (dob.getTime() > today.getTime())
     {
         document.getElementById("age").innerHTML = "please provide proper birth date";
@@ -92,6 +98,7 @@ function age(){
     }   
 }
 
+// confirm password validation
 document.validation.cnfpass.addEventListener("keyup", cnfpass);
 function cnfpass(){
     const pass1 = document.getElementById("password").value;
@@ -101,7 +108,8 @@ function cnfpass(){
         document.getElementById("cnfpassinfo").style.color = "red";
         document.getElementById("cnfpass").style.border = "2px solid red";
     }
-    else{
+    else if(pass2.length != 0)
+    {
         document.getElementById("cnfpassinfo").innerHTML = "";
         document.getElementById("cnfpass").style.border= "2px solid green";
     }
