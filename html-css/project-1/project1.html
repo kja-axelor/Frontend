@@ -19,17 +19,22 @@
 <body>
     <h1 style="text-align: center;">Create Form</h1>
     <div>
-        <form action="/">
+        <form action="/" id="validation" name="validation">
             <table cellpadding="7">
                 <tr>
                     <td><label for="username">Username:</label></td>
-                    <td><input type="text" id="username"></td>
+                    <td><input type="text" id="username" name="username"></td>
                     <td><small id="nameinfo"></small></td>
                 </tr>
                 <tr>
                     <td><label for="password">Password:</label></td>
                     <td><input type="password" name="Password" id="password"></td>
                     <td><small id="passinfo"></small></td>
+                </tr>
+                <tr>
+                    <td><label for="cnfpass">Confirm Password:</label></td>
+                    <td><input type="password" name="cnfpass" id="cnfpass"></td>
+                    <td><small id="cnfpassinfo"></small></td>
                 </tr>
                 <tr>
                     <td><label for="city">City of Employment:</label></td>
@@ -39,10 +44,12 @@
                 <tr>
                     <td><label for="dob">DOB:</label></td>
                     <td><input type="date" id="dob" name="dob" onchange="age()"></td>
+                    <td><small id="date"></small></td>
+                    <td><small id="age"></small></td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td><small id="age"></small></td>
+                    
                 </tr>
                 <tr>
                     <td><label for="server">Web server:</label></td>
@@ -80,7 +87,7 @@
                     <td></td>
                     <td>
                         <input type="button" name="login" id="login" value="Login" onclick="namevalidate(),passvalidate(),cityvalidate()">
-                        <input type="reset" name="Reset" id="reset">
+                        <input type="reset" name="Reset" id="reset" onclick="resetform()">
                     </td>
                 </tr>
             </table>
