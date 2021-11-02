@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender view</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+
+    <style>
+        td,table,th{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td{
+            text-align: center;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="months" style="text-align: center;">
+            <h1></h1>
+            <p></p>
+        </div>
+        <table style="margin:auto ;width: 50%;">
+            <tbody id="weekdays"></tbody>
+            <tbody id="prev-day"></tbody>
+            <tbody id="days"></tbody>
+        </table>
+    </div>
+    <script src="./js/calender.js"></script>
+</body>
+</html>
