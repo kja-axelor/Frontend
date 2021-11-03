@@ -20,18 +20,25 @@
             margin: 0;
             box-sizing: border-box;
         }
+        .sun{
+            color: red;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="months" style="text-align: center;">
             <h1></h1>
+            <i class="fas fa-angle-up prev"></i>
             <p></p>
+            <i class="fas fa-angle-down next"></i>
         </div>
+        <br>
         <table style="margin:auto ;width: 50%;">
             <tbody id="weekdays"></tbody>
-            <tbody id="prev-day"></tbody>
-            <tbody id="days"></tbody>
+            <tbody id="days">
+                <tr></tr>
+            </tbody>
         </table>
     </div>
     <script src="./js/calender.js"></script>
