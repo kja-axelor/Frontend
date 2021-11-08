@@ -99,12 +99,12 @@ var calender = function () {
 };
 
 let upper = document.querySelector(".up").addEventListener("click", () => {
-  date.setMonth(date.getMonth() + 1);
+  date.setMonth(date.getMonth() - 1);
   calender();
 });
 
 let down = document.querySelector(".down").addEventListener("click", ()=>{
-    date.setMonth(date.getMonth() - 1);
+    date.setMonth(date.getMonth() + 1);
     calender();
 });
 
