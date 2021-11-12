@@ -47,7 +47,6 @@ var calender = function () {
   document.querySelector(".months h1").innerHTML = months[c_month];
 
   document.querySelector(".months p").innerHTML = date.toDateString();
-
  let  monthDays = document.querySelector("#days");
 
   // space logic (prev days)
@@ -65,6 +64,8 @@ var calender = function () {
       // row seperate
       if(count % 7 == 0){
           days += `</tr>`;
+
+          // count restart
           count = 0;
       }
 

@@ -1,0 +1,17 @@
+//  URL module
+let url = require('url');
+
+const myURL = new URL(
+  "https://user:pass@sub.example.com:8080/p/a/t/h?query=string#hash"
+);
+console.log(myURL.hash);
+console.log(myURL.host);// host gives portnumber also
+console.log(myURL.hostname);
+console.log(myURL.href);
+console.log(myURL.pathname);
+console.log(myURL.port);
+console.log(myURL.protocol);
+console.log(myURL.search); // gives the value after question exlude hash
+console.log(myURL.searchParams);
+console.log(myURL.toString());
+console.log(myURL.toJSON());
