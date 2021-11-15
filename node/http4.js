@@ -1,11 +1,17 @@
 const http = require("http");
 const fs = require("fs");
+const express = require('express');
+var app = express();
+
+var bodyParser = require("body-parser").json();
+app.use(bodyParser);
+
 
 const server = http.createServer((req, res) => {
 
   // serving html pages
   if (req.url === "/") {
-    fs.readFile("G:\\Axelor\\Frontend\\html-css\\project-1\\project1.html", (error, data) => {
+    fs.readFile("G:\\Axelor\\Frontend\\node\\html\\form.html", (error, data) => {
       if (error) {
         throw error;
       } else {
@@ -14,8 +20,8 @@ const server = http.createServer((req, res) => {
     });
 
     // javascript
-  }else if(req.url === "/js/index.js"){
-    fs.readFile("G:\\Axelor\\Frontend\\html-css\\project-1\\js\\index.js",(error, data) => {
+  }else if(req.url === "/js/form.js"){
+    fs.readFile("G:\\Axelor\\Frontend\\node\\html\\js\\form.js",(error, data) => {
         if (error) {
           throw error;
         } else {
@@ -23,6 +29,21 @@ const server = http.createServer((req, res) => {
         }
       }
     );
+  }
+  else if(req.url === '/message.html'){
+    fs.readFile('G:\\Axelor\\Frontend\\node\\html\\message.html', (error,data)=>{
+      if(error){
+        throw error;
+      }
+      else{
+      fs.appendFile("G:\\Axelor\\Frontend\\node\\log.txt",res.statusMessage + "\n",()=>{
+        console.log("log is saved!!")
+      })
+        console.log(req.body) 
+        res.end(data);
+      }
+    })
+
   }
   else {
     res.end("<h1 style='color:red;'>404 Page not found");

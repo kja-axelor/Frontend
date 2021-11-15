@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-1</title>
+    <style>
+        td {
+            width: 50px;
+        }
+
+        table {
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Create Form</h1>
+    <div>
+        <form action="./message.html" id="validation" name="validation" onsubmit="return namevalidate() && passvalidate() && cityvalidate()" method="post">
+            <table cellpadding="7">
+                <tr>
+                    <td><label for="username">Username:</label></td>
+                    <td><input type="text" id="username" name="username"></td>
+                    <td><small id="nameinfo"></small></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                    <td><input type="text" name="Password" id="password"></td>
+                    <td><small id="passinfo"></small></td>
+                </tr>
+                <tr>
+                    <td><label for="cnfpass">Confirm Password:</label></td>
+                    <td><input type="password" name="cnfpass" id="cnfpass"></td>
+                    <td><small id="cnfpassinfo"></small></td>
+                </tr>
+                <tr>
+                    <td><label for="city">City of Employment:</label></td>
+                    <td><input type="text" id="city"></td>
+                    <td><small id="cityinfo"></small></td>
+                </tr>
+                <tr>
+                    <td><label for="dob">DOB:</label></td>
+                    <td><input type="date" id="dob" name="dob" onchange="age()"></td>
+                    <td><small id="date"></small></td>
+                    <td><small id="age"></small></td>
+                </tr>
+                <tr>
+                    <td><label for="server">Web server:</label></td>
+                    <td>
+                        <select name="server" id="server">
+                            <option value="webserver">Choose a web server</option>
+                            <option value="apache">Apache</option>
+                            <option value="tomcat">Tomcat</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Please specify your role</label></td>
+                    <td>
+                        <input type="radio" name="role" id="admin" value="Admin">
+                        <label for="admin">Admin</label><br>
+                        <input type="radio" name="role" id="engineer" value="Engineer">
+                        <label for="engineer">Engineer</label><br>
+                        <input type="radio" name="role" id="manager" value="Manager">
+                        <label for="manager">Manager</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Single Sign-on to the following activity</label></td>
+                    <td>
+                        <input type="checkbox" name="mail" id="mail" value="Mail">
+                        <label for="mail">Mail</label><br>
+                        <input type="checkbox" name="payroll" id="payroll" value="Payroll">
+                        <label for="payroll">Payroll</label><br>
+                        <input type="checkbox" name="service" id="service" value="service">
+                        <label for="service">Self-service</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" name="login" id="login" value="Submit">
+                        <input type="reset" name="Reset" id="reset" onclick="resetform()">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script src="./js/form.js"></script>
+</body>
+
+</html>
