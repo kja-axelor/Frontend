@@ -1,8 +1,6 @@
-console.log("javaScript added");
-
 function namevalidate() {
   var name = document.getElementById("username").value;
-  let reg = /^([^0-9/W]*)$/;
+  let reg = /^([^0-9/W\s]*)$/;
   if (reg.test(name) && (name.length != 0)) {
     document.getElementById("nameinfo").innerHTML = "";
     document.getElementById("username").style.border = "2px solid green";
@@ -17,19 +15,22 @@ function namevalidate() {
 }
 
 function passvalidate() {
-  let reg = /[0-9][A-Z]/;
   var password = document.getElementById("password").value;
-  if (password.length < 8 ) {
+  if(password.length < 8){
     document.getElementById("password").style.border = "2px solid red";
-    document.getElementById("passinfo").innerHTML =
-      "password must have atleast 8 characters";
+    document.getElementById("passinfo").innerHTML = "password must have atleast 8 characters";
     document.getElementById("passinfo").style.color = "red";
     return false;
   }
-   else if (! reg.test(password)) {
+  else if (password.search(/[0-9]/) == -1) {
     document.getElementById("password").style.border = "2px solid red";
-    document.getElementById("passinfo").innerHTML =
-      "password must have atleast one number and one upper";
+    document.getElementById("passinfo").innerHTML = "password must have atleast one number";
+    document.getElementById("passinfo").style.color = "red";
+    return false;
+  }
+  else if(password.search(/[A-Z]/) == -1){
+    document.getElementById("password").style.border = "2px solid red";
+    document.getElementById("passinfo").innerHTML ="password must have atleast one uppercase";
     document.getElementById("passinfo").style.color = "red";
     return false;
   }
@@ -41,17 +42,18 @@ function passvalidate() {
 }
 
 function cityvalidate() {
+  let reg = /^([^0-9/W\s]*)$/;
   var city = document.getElementById("city").value;
-  if (city.length == 0) {
+  if (city.length != 0 && reg.test(city)) {
+     document.getElementById("city").style.border = "2px solid green";
+     document.getElementById("cityinfo").innerHTML = "";
+     return true;
+  } else {
     document.getElementById("city").style.border = "2px solid red";
     document.getElementById("cityinfo").innerHTML =
       "please provide proper city name";
     document.getElementById("cityinfo").style.color = "red";
     return false;
-  } else {
-    document.getElementById("city").style.border = "2px solid green";
-    document.getElementById("cityinfo").innerHTML = "";
-    return true;
   }
 }
 function age() {
@@ -117,18 +119,25 @@ function age() {
   }
 }
 
-// confirm password validation
+// // confirm password validation
+// document.validation.addEventListener("submit",cnfpass);
 document.validation.cnfpass.addEventListener("keyup", cnfpass);
 function cnfpass() {
   const pass1 = document.getElementById("password").value;
   const pass2 = document.getElementById("cnfpass").value;
-  if (pass1 != pass2) {
+  if(pass2.length == 0){
+    document.getElementById("cnfpassinfo").innerHTML = "please confirm your password";
+    document.getElementById("cnfpassinfo").style.color = "red";
+    document.getElementById("cnfpass").style.border = "2px solid red";
+    return false;
+  }
+  else if (pass1 != pass2) {
     document.getElementById("cnfpassinfo").innerHTML = "Password didn't match";
     document.getElementById("cnfpassinfo").style.color = "red";
     document.getElementById("cnfpass").style.border = "2px solid red";
     return false;
   }
-  else if (pass2.length != 0) {
+  else{
     document.getElementById("cnfpassinfo").innerHTML = "";
     document.getElementById("cnfpass").style.border = "2px solid green";
     return true;
