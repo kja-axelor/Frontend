@@ -57,7 +57,6 @@ function cityvalidate() {
   }
 }
 function y_age() {
-  console.log("in function age")
   const input = document.getElementById("dob").value;
   var dob = new Date(input);
   var today = new Date();
@@ -116,13 +115,13 @@ function y_age() {
     document.getElementById("age").innerHTML = `Age: ${age} years`;
     document.getElementById("age").style.color = "green";
     document.getElementById("age").style.fontWeight = "bold";
+    return true;
   }
 }
 
 // // confirm password validation
 document.validation.cnfpass.addEventListener("keyup", cnfpasswd);
 function cnfpasswd() {
-  console.log("Hello cnfpass")
   const pass1 = document.getElementById("password").value;
   const pass2 = document.getElementById("cnfpass").value;
   if(pass2.length == 0){
@@ -143,6 +142,48 @@ function cnfpasswd() {
     return true;
   }
 }
+
+function radiobtnvalid() {
+  let role = document.getElementsByName("role");
+  if (!(role[0].checked || role[1].checked || role[2].checked)) {
+    document.getElementById("roleinfo").innerHTML = "please check role!";
+    document.getElementById("roleinfo").style.color = "red";
+    return false;
+  } else {
+    document.getElementById("roleinfo").innerHTML = "";
+    return true;
+  }
+}
+
+function checkboxvalid(){
+  let mail = document.getElementById("mail");
+  let payroll = document.getElementById("payroll");
+  let service = document.getElementById("service");
+
+  if(!(mail.checked || payroll.checked || service.checked)){
+    document.getElementById("checkinfo").innerHTML = "please check activities"
+    document.getElementById("checkinfo").style.color = "red";
+    return false;
+  }
+  else{
+     document.getElementById("checkinfo").innerHTML = "";
+    return true;
+  }
+}
+
+function selvalidate(){
+  let server = document.getElementById("server");
+  if(server.value == "webserver"){    
+    document.getElementById("servinfo").innerHTML = "please choose a server";
+    document.getElementById("servinfo").style.color = "red";
+    return false;
+  }
+  else{
+    document.getElementById("servinfo").innerHTML = "";
+    return true;
+  }
+}
+
 function resetform() {
   // html reset
   document.getElementById("nameinfo").innerHTML = "";
@@ -151,7 +192,8 @@ function resetform() {
   document.getElementById("age").innerHTML = "";
   document.getElementById("cnfpassinfo").innerHTML = "";
   document.getElementById("date").innerHTML = "";
-
+ 
+  
   // css reset
   document.getElementById("cnfpass").style = "";
   document.getElementById("username").style = "";

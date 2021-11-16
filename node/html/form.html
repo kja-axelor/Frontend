@@ -20,7 +20,7 @@
 <body>
     <h1 style="text-align: center;">Create Form</h1>
     <div>
-        <form action="./message.html" id="validation" name="validation" onsubmit="return namevalidate() && passvalidate() && cnfpasswd() && cityvalidate()  && y_age()" method="post">
+        <form action="./message.html" id="validation" name="validation" onsubmit=" return namevalidate() && passvalidate() && cnfpasswd() && cityvalidate() && y_age() && selvalidate()  && radiobtnvalid() && checkboxvalid()" method="post">
             <table cellpadding="7">
                 <tr>
                     <td><label for="username">Username:</label></td>
@@ -57,28 +57,31 @@
                             <option value="tomcat">Tomcat</option>
                         </select>
                     </td>
+                    <td><small id="servinfo"></small></td>
                 </tr>
                 <tr>
                     <td><label>Please specify your role</label></td>
                     <td>
-                        <input type="radio" name="role" id="admin" value="Admin">
+                        <input type="radio" name="role" value="Admin">
                         <label for="admin">Admin</label><br>
-                        <input type="radio" name="role" id="engineer" value="Engineer">
+                        <input type="radio" name="role" value="Engineer">
                         <label for="engineer">Engineer</label><br>
-                        <input type="radio" name="role" id="manager" value="Manager">
+                        <input type="radio" name="role" value="Manager">
                         <label for="manager">Manager</label>
                     </td>
+                    <td><small id="roleinfo"></small></td>
                 </tr>
                 <tr>
                     <td><label>Single Sign-on to the following activity</label></td>
                     <td>
-                        <input type="checkbox" name="mail" id="mail" value="Mail">
+                        <input type="checkbox" name="activity" id="mail" value="Mail">
                         <label for="mail">Mail</label><br>
-                        <input type="checkbox" name="payroll" id="payroll" value="Payroll">
+                        <input type="checkbox" name="activity" id="payroll" value="Payroll">
                         <label for="payroll">Payroll</label><br>
-                        <input type="checkbox" name="service" id="service" value="service">
+                        <input type="checkbox" name="activity" id="service" value="service">
                         <label for="service">Self-service</label>
                     </td>
+                    <td><small id="checkinfo"></small></td>
                 </tr>
                 <tr>
                     <td></td>
