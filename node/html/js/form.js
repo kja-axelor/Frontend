@@ -56,14 +56,14 @@ function cityvalidate() {
     return false;
   }
 }
-function age() {
+function y_age() {
+  console.log("in function age")
   const input = document.getElementById("dob").value;
   var dob = new Date(input);
   var today = new Date();
   if(input == "" || input == "null"){
-        document.getElementById("dateinfo").innerHTML = "please fill date";
-        document.getElementById("dateinfo").style.color = "red";
-        document.getElementById("dob").style.border = "2px solid red";
+        document.getElementById("date").innerHTML = "please fill DOB";
+        document.getElementById("date").style.color = "red";
         return false;
     }
   else if (dob.getTime() > today.getTime()) {
@@ -120,9 +120,9 @@ function age() {
 }
 
 // // confirm password validation
-// document.validation.addEventListener("submit",cnfpass);
-document.validation.cnfpass.addEventListener("keyup", cnfpass);
-function cnfpass() {
+document.validation.cnfpass.addEventListener("keyup", cnfpasswd);
+function cnfpasswd() {
+  console.log("Hello cnfpass")
   const pass1 = document.getElementById("password").value;
   const pass2 = document.getElementById("cnfpass").value;
   if(pass2.length == 0){
